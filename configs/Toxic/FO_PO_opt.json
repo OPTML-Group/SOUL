@@ -1,0 +1,31 @@
+{
+    "overall": {
+        "model_name": "facebook/opt-1.3b",
+        "logger": "json",
+        "cache_dir": "./.cache",
+        "seed": 0
+    },
+    "unlearn": {
+        "unlearn_method": "CL+FT",
+        "num_epochs": 5,
+        "lr":2e-5,
+        "weight_decay":0.0,
+        "gradient_accumulation_steps":4,
+        "CL+FT":{
+            "gamma":0.1
+        }        
+    },
+    "dataset": {
+        "forget_dataset_name": "SafePku",
+        "retain_dataset_name": "C4",
+        "dataset_seed": 1000,
+        "forget_ratio": 200,
+        "self_retain": false,
+        "batch_size": 1
+    },
+    "logger": {
+        "json": {
+            "root": "files/results/unlearn_toxic/opt_1b_CL_200/"
+        }
+    }
+}

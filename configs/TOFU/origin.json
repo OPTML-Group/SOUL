@@ -1,0 +1,29 @@
+{
+    "overall": {
+        "model_name": "locuslab/tofu_ft_llama2-7b",
+        "logger": "json",
+        "cache_dir": "./.cache",
+        "seed": 0
+    },
+    "unlearn": {
+        "unlearn_method": "origin",
+        "num_epochs": 5,
+        "lr":1e-5,
+        "weight_decay":0.1,
+        "gradient_accumulation_steps":4,
+        "task_name":"tofu"
+    },
+    "dataset": {
+        "forget_dataset_name": "Tofu_forget10",
+        "retain_dataset_name": "Tofu_retain90",
+        "dataset_seed": 1000,
+        "forget_ratio": 400,
+        "self_retain": false,
+        "batch_size": 1
+    },
+    "logger": {
+        "json": {
+            "root": "files/results/unlearn_tofu/llama_7b_origin_400/"
+        }
+    }
+}

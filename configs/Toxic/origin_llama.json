@@ -1,0 +1,28 @@
+{
+    "overall": {
+        "model_name": "meta-llama/Llama-2-7b-hf",
+        "logger": "json",
+        "cache_dir": "./.cache",
+        "seed": 0
+    },
+    "unlearn": {
+        "unlearn_method": "origin",
+        "num_epochs": 5,
+        "lr":1e-6,
+        "weight_decay":0.0,
+        "gradient_accumulation_steps":4
+    },
+    "dataset": {
+        "forget_dataset_name": "SafePku",
+        "retain_dataset_name": "TruthfulQA",
+        "dataset_seed": 1000,
+        "forget_ratio": 200,
+        "self_retain": false,
+        "batch_size": 1
+    },
+    "logger": {
+        "json": {
+            "root": "files/results/unlearn_toxic/llama7b_origin/"
+        }
+    }
+}

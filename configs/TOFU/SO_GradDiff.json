@@ -1,0 +1,38 @@
+{
+    "overall": {
+        "model_name": "locuslab/tofu_ft_llama2-7b",
+        "logger": "json",
+        "cache_dir": "./.cache",
+        "seed": 0
+    },
+    "unlearn": {
+        "unlearn_method": "GA+FT",
+        "num_epochs": 5,
+        "lr":5e-6,
+        "weight_decay":0.1,
+        "gradient_accumulation_steps":4,
+        "task_name":"tofu",
+        "GA+FT":{
+            "gamma":2
+        },
+        "sophia": true,
+        "sophia_params": {
+            "betas_low": 0.9,
+            "betas_high": 0.95,
+            "rho": 0.04
+        }
+    },
+    "dataset": {
+        "forget_dataset_name": "Tofu_forget10",
+        "retain_dataset_name": "Tofu_retain90",
+        "dataset_seed": 1000,
+        "forget_ratio": 400,
+        "self_retain": false,
+        "batch_size": 1
+    },
+    "logger": {
+        "json": {
+            "root": "files/results/unlearn_tofu/SO-GradDiff/"
+        }
+    }
+}
