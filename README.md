@@ -4,9 +4,6 @@
 
 [![preprint](https://img.shields.io/static/v1?label=arXiv&message=2402.11846&color=B31B1B)]()
 [![website](https://img.shields.io/badge/Website-Page-cyan)]()
-<!-- [![dataset](https://img.shields.io/badge/HuggingFace-Dataset-blue)](https://huggingface.co/datasets/OPTML-Group/UnlearnCanvas) -->
-<!-- [![benchmark](https://img.shields.io/badge/HuggingFace-Benchmark-green)](https://huggingface.co/spaces/OPTML-Group/UnlearnCanvas-Benchmark) -->
-<!-- [![video](https://img.shields.io/badge/Youtube-Video-purple)](https://youtu.be/lC_R_b9ZiH8) -->
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 <table align="center">
