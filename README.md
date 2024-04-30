@@ -2,7 +2,7 @@
  
 # [SOUL: Unlocking the Power of Second-Order Optimization for LLM Unlearning]()
 
-<!---[![preprint](https://img.shields.io/static/v1?label=arXiv&message=2402.11846&color=B31B1B)]()
+[![preprint](https://img.shields.io/static/v1?label=arXiv&message=2402.11846&color=B31B1B)](https://arxiv.org/pdf/2404.18239)
 [![website](https://img.shields.io/badge/Website-Page-cyan)]()--->
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
