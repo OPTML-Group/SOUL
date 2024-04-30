@@ -2,7 +2,7 @@
  
 # [SOUL: Unlocking the Power of Second-Order Optimization for LLM Unlearning]()
 
-[![preprint](https://img.shields.io/static/v1?label=arXiv&message=2402.11846&color=B31B1B)](https://arxiv.org/pdf/2404.18239)
+[![preprint](https://img.shields.io/static/v1?label=arXiv&message=2404.18239&color=B31B1B)](https://arxiv.org/pdf/2404.18239)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 <table align="center">
@@ -60,5 +60,12 @@ python src/exec/unlearn_model.py --config_file ${config-file} ${args you want to
 
 ## 4) Cite This Work
 ```
-
+@misc{jia2024soul,
+      title={SOUL: Unlocking the Power of Second-Order Optimization for LLM Unlearning}, 
+      author={Jinghan Jia and Yihua Zhang and Yimeng Zhang and Jiancheng Liu and Bharat Runwal and James Diffenderfer and Bhavya Kailkhura and Sijia Liu},
+      year={2024},
+      eprint={2404.18239},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
 ```
