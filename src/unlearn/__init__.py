@@ -4,7 +4,7 @@ from .GA import GA, GA_FT, GA_KL, GA_FT_epoch, GA_KL_epoch
 from .KL import KL
 from .RL import RL
 
-
+from .NPO import NPO
 def get_unlearn_method(name, *args, **kwargs):
     if name == "FT":
         unlearner = FT(*args, **kwargs)
@@ -32,6 +32,8 @@ def get_unlearn_method(name, *args, **kwargs):
         unlearner = CL_KL(if_kl=True, *args, **kwargs)
     elif name == "CL_FT_epoch":
         unlearner = CL_FT_epoch(*args, **kwargs)
+    elif name == "NPO":
+        unlearner = NPO(if_kl=True,*args, **kwargs)
     else:
         raise ValueError("No unlearning method")
 

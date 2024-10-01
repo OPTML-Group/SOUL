@@ -15,7 +15,7 @@ class ToFU(BaseDataset):
         self.dataset = defaultdict()
         self.if_llama = if_llama
         self.question_start_token = "[INST] " if self.if_llama else "### Question: "
-        self.question_end_token = " [\INST]" if if_llama else "\n"
+        self.question_end_token = " [/INST]" if if_llama else "\n"
         self.answer_start_token = " " if if_llama else "### Answer: "
         self.subset = subset
         self.dataset = self.get_dataset()

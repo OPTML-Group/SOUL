@@ -60,7 +60,7 @@ class Unlearn:
             model = get_peft_model(model, peft_config)
             print(model.print_trainable_parameters())
         model.seqlen = model.config.max_position_embeddings
-        tokenizer = AutoTokenizer.from_pretrained(self.model_name, use_fast=False)
+        tokenizer = AutoTokenizer.from_pretrained(self.model_name, use_fast=False, cache_dir=self.cache_dir,)
 
         if tokenizer.pad_token_id is None:
             tokenizer.pad_token = tokenizer.eos_token
