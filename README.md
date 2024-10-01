@@ -16,7 +16,7 @@
 </table>
 </div>
 
-Welcome to the official repository for the paper, [SOUL: Unlocking the Power of Second-Order Optimization for LLM Unlearning](). This repository contains the code for the experiments used in the paper.
+Welcome to the official repository for the EMNLP'24 paper, [SOUL: Unlocking the Power of Second-Order Optimization for LLM Unlearning](). This repository contains the code for the experiments used in the paper.
 
 ## Abstract
 Large Language Models (LLMs) have highlighted the necessity of effective unlearning mechanisms to comply with data regulations and ethical AI practices. LLM unlearning aims at removing undesired data influences and associated model capabilities without compromising utility out of the scope of unlearning. While interest in studying LLM unlearning is growing,the impact of the optimizer choice for LLM unlearning remains under-explored. In this work, we shed light on the significance of optimizer selection in LLM unlearning for the first time, establishing a clear connection between {second-order optimization} and influence unlearning (a classical approach using influence functions to update the model for data influence removal).
