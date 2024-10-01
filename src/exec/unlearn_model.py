@@ -39,6 +39,7 @@ Section("unlearn", "Unlearning configs").params(
                 "GA_KL_epoch",
                 "CL_FT_epoch",
                 "sys",
+                "NPO",
             ]
         ),
         default="origin",
@@ -65,7 +66,6 @@ Section("unlearn.sophia_params", "SOPHIA configs").enable_if(
     betas_high=Param(float, default=0.95, desc="Betas higher for SOPHIA"),
     rho=Param(float, default=0.03, desc="Rho for SOPHIA"),
 )
-
 Section("unlearn.l1_sparse", "L1 sparse unlearning configs").enable_if(
     lambda cfg: cfg["unlearn.unlearn_method"] == "l1_sparse"
 ).params(
@@ -77,7 +77,11 @@ Section("unlearn.CL+KL", "CL+KL unlearning configs").enable_if(
 ).params(
     gamma=Param(float, default=0.0, desc="hyperparameters before CL loss"),
 )
-
+Section("unlearn.NPO", "NPO unlearning configs").enable_if(
+    lambda cfg: cfg["unlearn.unlearn_method"] == "NPO"
+).params(
+    gamma=Param(float, default=0.0, desc="hyperparameters before CL loss"),
+)
 Section("unlearn.CL+FT", "CL+FT unlearning configs").enable_if(
     lambda cfg: cfg["unlearn.unlearn_method"] == "CL+FT"
 ).params(
