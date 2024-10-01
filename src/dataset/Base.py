@@ -10,7 +10,7 @@ class BaseDataset:
         self.with_normal = with_retain
         self.if_llama = if_llama
         self.question_start_token = "[INST] " if self.if_llama else "### Question: "
-        self.question_end_token = " [/INST]" if if_llama else "\n"
+        self.question_end_token = " [\INST]" if if_llama else "\n"
         self.answer_start_token = " " if if_llama else "### Answer: "
 
     def get_dataset(self):

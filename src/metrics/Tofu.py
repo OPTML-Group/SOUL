@@ -39,7 +39,7 @@ def compute_prob(model, prompt, answer, tokenizer, if_llama=False,if_system=Fals
     question_start_token = "[INST] " if if_llama else "### Question: "
     if if_system:
         question_start_token = "[INST] " + sys_prompt + " " if if_llama else "### Question: " + sys_prompt + " "
-    question_end_token = " [/INST]" if if_llama else "\n"
+    question_end_token = " [\INST]" if if_llama else "\n"
     answer_start_token = " " if if_llama else "### Answer: "
     question = question_start_token + prompt + question_end_token
     full_text = question + answer_start_token + answer
@@ -69,7 +69,7 @@ def generate_answer(model, tokenizer, prompt, if_llama=False, if_system=False):
         max_length = 300
     else:
         max_length = 200
-    question_end_token = " [/INST]" if if_llama else "\n"
+    question_end_token = " [\INST]" if if_llama else "\n"
     question = question_start_token + prompt + question_end_token
     len_question = len(tokenizer.tokenize(question, add_special_tokens=True))
     with torch.no_grad():
@@ -174,7 +174,7 @@ def eval_tofu_adv(model, tokenizer, subset="forget10",if_llama=False, shots = 1)
     random.seed(0)
     idx = random.sample(range(len(retain_dataset["test"])), shots)
     question_start_token = "[INST] " if if_llama else "### Question: "
-    question_end_token = " [/INST]" if if_llama else "\n"
+    question_end_token = " [\INST]" if if_llama else "\n"
     answer_start_token = " " if if_llama else "### Answer: "
     total = 0
     adv_prompts = ""
@@ -422,7 +422,7 @@ def MIA(model,tokenizer,forget_subset,remain_subset,if_llama=False,if_system=Fal
     question_start_token = "[INST] " if if_llama else "### Question: "
     if if_system:
         question_start_token = "[INST] " + sys_prompt + " " if if_llama else "### Question: " + sys_prompt + " "
-    question_end_token = " [/INST]" if if_llama else "\n"
+    question_end_token = " [\INST]" if if_llama else "\n"
     answer_start_token = " " if if_llama else "### Answer: "    
     retain_set = ToFU("TOFU", subset= remain_subset)
     retain_set = retain_set.build_dataset(tokenizer)
